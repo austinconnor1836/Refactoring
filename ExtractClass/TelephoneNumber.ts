@@ -1,12 +1,16 @@
 class TelephoneNumber {
-    _officeAreaCode: number;
-    _officeNumber: number;
+    _areaCode: number;
+    _number: number;
 
-    get officeAreaCode()            { return this._officeAreaCode; }
-    set officeAreaCode(arg: number) { this._officeAreaCode = arg; } 
+    get areaCode()            { return this._areaCode; }
+    set areaCode(arg: number) { this._areaCode = arg; } 
 
-    get officeNumber()            { return this._officeNumber; }
-    set officeNumber(arg: number) { this._officeNumber = arg; } 
+    get number()              { return this._number; }
+    set number(arg: number)   { this._number = arg; } 
+
+    get telephoneNumber()     { return `(${this.areaCode} ${this.number})`; }
+
+    toString() { return `(${this.areaCode}) ${this.number}`; }
 }
 
 export default TelephoneNumber;

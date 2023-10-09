@@ -7,6 +7,11 @@ class Person {
         this._telephoneNumber = new TelephoneNumber();
     }
 
-    get officeAreaCode()            { return this._telephoneNumber.officeAreaCode; } 
-    set officeAreaCode(arg: number) { this._telephoneNumber.officeAreaCode = arg; }
+    get officeAreaCode()            { return this._telephoneNumber.areaCode; } 
+    set officeAreaCode(arg: number) { this._telephoneNumber.areaCode = arg; }
+
+    get officeNumber()              { return this._telephoneNumber.number; }
+    set officeNumber(arg: number)   { this._telephoneNumber.number = arg; }
+
+    get telephoneNumber()           { return this._telephoneNumber.toString(); }
 }
